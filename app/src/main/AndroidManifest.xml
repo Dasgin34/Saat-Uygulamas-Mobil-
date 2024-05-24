@@ -1,0 +1,76 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.saatuygulamam">
+
+    <!-- İzinler -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SaatUygulamam"
+        tools:targetApi="31">
+
+        <!-- Aktiviteler -->
+        <activity
+            android:name=".ZamanlayiciActivity"
+            android:exported="false"
+            android:label="@string/title_activity_zamanlayici"
+            android:theme="@style/Theme.SaatUygulamam" />
+
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="false"
+            android:label="@string/title_activity_alarm"
+            android:theme="@style/Theme.SaatUygulamam" />
+
+        <activity
+            android:name=".ZamanlayıcıActivity"
+            android:exported="false"
+            android:label="@string/title_activity_zamanlayıcı"
+            android:theme="@style/Theme.SaatUygulamam" />
+
+        <activity
+            android:name=".KronometreActivity"
+            android:exported="false"
+            android:label="@string/title_activity_kronometre"
+            android:theme="@style/Theme.SaatUygulamam" />
+
+        <activity
+            android:name=".KronometreActivity1"
+            android:exported="false"
+            android:label="@string/title_activity_kronometre1"
+            android:theme="@style/Theme.SaatUygulamam" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Alarm Receiver -->
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- AlarmForegroundService -->
+        <service
+            android:name=".AlarmForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="location|dataSync" />
+    </application>
+</manifest>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kronometree">
+
+    <Button
+        android:id="@+id/sıfırla"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="resetChronometer"
+        android:text="Sıfırla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/durdur"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/baslat"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="startChronometer"
+        android:text="Başlat"
+        app:layout_constraintEnd_toStartOf="@+id/durdur"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/durdur"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="56dp"
+        android:onClick="stopChronometer"
+        android:text="Durdur"
+        app:layout_constraintEnd_toStartOf="@+id/sıfırla"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/baslat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="117dp"
+        android:layout_height="121dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="504dp"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/durdur"
+        app:layout_constraintVertical_bias="0.936" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="172dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="40dp"
+        android:background="#FDFCFC"
+        android:text="KRONOMETRE"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/durdur"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/arrow_imageview"
+        android:layout_width="302dp"
+        android:layout_height="272dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ok_gorseli"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/chronometer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/durdur"
+        app:layout_constraintVertical_bias="0.523"
+        android:rotation="270"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

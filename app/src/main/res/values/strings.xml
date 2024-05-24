@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Saat Uygulamam</string>
+    <string name="title_activity_kronometre">KronometreActivity</string>
+    <string name="title_activity_kronometre1">KronometreActivity1</string>
+    <string name="title_activity_zamanlayıcı">ZamanlayıcıActivity</string>
+    <string name="title_activity_alarm">AlarmActivity</string>
+    <string name="title_activity_zamanlayici">ZamanlayiciActivity</string>
+</resources>
